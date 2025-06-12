@@ -1,10 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <title>CUSTOMER INFORMATION FORM </title>
 </head>
 <body>
-$END$
+<form action="#" method="get" class="form1">
+    <h1 style="color: #0048ff" align="center"> CUSTOMER INFORMATION </h1>
+    <label> FULL NAME </label>
+    <input name="full name" style="margin-bottom: 20px"> <br>
+    <label> GENDER </label>
+    <input type="radio" name="gender" value="male" style="margin-bottom: 20px"> Male
+    <input type="radio" name="gender" value="female"> Female<br>
+    <label > ADDRESS </label>
+    <select style="margin-bottom: 20px">
+        <option> HCM</option>
+        <option> HA NOI</option>
+        <option> DA NANG</option>
+    </select><br>
+    <label> EMAIL ADDRESS </label>
+    <input type="email" style="margin-bottom:20px" > <br>
+    <label> PHONE NUMBER </label>
+    <input type="number" style="margin-bottom: 20px" > <br>
+    <label> PREFERRED CONTACT METHODS </label>
+    <input type="checkbox" value="mail"> mail
+    <input type="checkbox" value="email"> email
+    <input type="checkbox" value="phone"> phone<br>
+    <button type="submit">Send</button>
+</form>
 </body>
 </html>

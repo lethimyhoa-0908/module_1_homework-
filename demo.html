@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<h1>Tính diện tích hình tròn</h1>
+<input id="banKinh" oninput="tinhDienTich()" placeholder="Nhập bán kính hình tròn">
+<button onclick="tinhDienTich()">Tính diện tích</button>
+<p id="ketQua"></p>
+</body>
+<script>
+
+  function tinhDienTich() {
+    let r = document.getElementById('banKinh').value;
+    let s = r * r * 3.14;
+    document.getElementById("ketQua").innerHTML = "<b>diện tính hình tròn : </b>" + s
+  }
+</script>
+</html>

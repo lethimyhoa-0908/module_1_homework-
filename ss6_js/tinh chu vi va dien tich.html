@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tinh chu vi va dien tich hinh</title>
+</head>
+<body>
+<h1> Tinh dien tich va chu vi hinh chu nhat </h1>
+chieu dai: <input id="chieudai" oninput="tinhDienTichvaChuVi()" " placeholder="chieudai"> cm <br>
+chieu rong: <input id="chieurong" oninput="tinhDienTichvaChuVi()" placeholder="chieurong"> cm <br>
+<p id="dientich"></p>
+<p id="chuvi"></p>
+</body>
+<script>
+    function tinhDienTichvaChuVi() {
+        let d = document.getElementById('chieudai').value
+        let r = document.getElementById('chieurong').value
+        let s = d * r
+        let c = d*2+r*2
+        document.getElementById("dientich").innerHTML = "<b>dien tich hinh chu nhat (cm2) : </b>" + s
+        document.getElementById("chuvi").innerHTML = "<b>chu vi hinh chu nhat (cm) : </b>" + c
+    }
+
+</script>
+</html>
