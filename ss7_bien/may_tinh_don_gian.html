@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+<h1> Calculator</h1>
+<input id="n1" type="number" onclick="calculator()"> <br>
+<input id="n2" type="number"onclick="calculator()"><br>
+       <button  type="button"> + </button>
+       <button  type="button"> - </button>
+       <button id="multiple" type="button"> x </button>
+       <button id="devide" type="button" > / </button>
+<p id="result"></p>
+</body>
+<script>
+    function calculator() {
+        let number1 = document.getElementById('n1').value
+        let number2 = document.getElementById('n2').value
+        let t1 = number1*1+number2 *1
+        let t2 = (number1*1)-(number2 *1)
+        let t3 = (number1*1)*(number2 *1)
+        let t4 = (number1*1)/(number2 *1)
+
+</html>

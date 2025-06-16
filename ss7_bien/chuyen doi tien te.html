@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>currency converter</title>
+</head>
+<body>
+<h1>currency converter </h1>
+Amount <input id="amount" type="number" oninput="doitien()"> <br>
+From currency <select id ="from">
+  <option id = 'VND'> VND</option>
+  <option> JPY </option>
+  <option> USD</option>
+  <option> KRW</option>
+</select id ='to'><br>
+To currency <select> <br>
+  <option> VND</option>
+  <option id ='JPY'> JPY </option>
+  <option> USD</option>
+  <option> KRW</option>
+</select>
+<p id="ketqua"></p>
+<script>
+  const vnd_jpy =0.00557
+  const vnd_krw=0.05202
+  const vnd_usd=0.00003841
+  const jpy_vnd=179.70
+  const jpy_usd=0.00697
+  const jpy_krw=9.48
+  const krw_vnd=19.225
+  const krw_jpy=0.1059
+  const krw_usd=0.0007378
+  const usd_vnd=26,036
+  const usd_krw=1,355.45
+  const usd_jpy=143.58
+  Function doitien() {
+    let sotien = document.getElementById('amount').value
+if (from == "VND" && to == 'JPY')
+{let result = sotien *  vnd_jpy
+  document.getElementById("ketqua").innerHTML = "<b>result : </b>" + result
+}
+
+</script>
+</body>
+</html>
