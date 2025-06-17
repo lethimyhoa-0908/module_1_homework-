@@ -2,44 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>currency converter</title>
+    <title>Currency Converter</title>
 </head>
 <body>
-<h1>currency converter </h1>
-Amount <input id="amount" type="number" oninput="doitien()"> <br>
-From currency <select id ="from">
-  <option id = 'VND'> VND</option>
-  <option> JPY </option>
-  <option> USD</option>
-  <option> KRW</option>
-</select id ='to'><br>
-To currency <select> <br>
-  <option> VND</option>
-  <option id ='JPY'> JPY </option>
-  <option> USD</option>
-  <option> KRW</option>
+<h1>Currency Converter</h1>
+Amount: <input id="amount" type="number" oninput="convert()"> <br>
+From currency:
+<select id="from" onchange="convert()">
+    <option value="25000">VND</option>
+    <option value="145">JPY</option>
+    <option value="1">USD</option>
+    <option value="13680">KRW</option>
 </select>
-<p id="ketqua"></p>
-<script>
-  const vnd_jpy =0.00557
-  const vnd_krw=0.05202
-  const vnd_usd=0.00003841
-  const jpy_vnd=179.70
-  const jpy_usd=0.00697
-  const jpy_krw=9.48
-  const krw_vnd=19.225
-  const krw_jpy=0.1059
-  const krw_usd=0.0007378
-  const usd_vnd=26,036
-  const usd_krw=1,355.45
-  const usd_jpy=143.58
-  Function doitien() {
-    let sotien = document.getElementById('amount').value
-if (from == "VND" && to == 'JPY')
-{let result = sotien *  vnd_jpy
-  document.getElementById("ketqua").innerHTML = "<b>result : </b>" + result
-}
+To currency:
+<select id="to" onchange="convert()">
+    <option value="25000">VND</option>
+    <option value="145">JPY</option>
+    <option value="1">USD</option>
+    <option value="13680">KRW</option>
+</select>
 
+<p id="ketqua"></p>
+
+<script>
+    function convert() {
+        let amount = document.getElementById('amount').value;
+        let from = parseFloat(document.getElementById('from').value);
+        let to = parseFloat(document.getElementById('to').value);
+
+        let result = amount * (to / from);
+        document.getElementById("ketqua").textContent = `Result: ${result.toFixed(4)}`;
+    }
 </script>
 </body>
 </html>
