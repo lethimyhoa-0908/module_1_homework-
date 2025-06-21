@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>check a chia hết cho b không?</title>
+</head>
+<body>
+Nhap a <input type="number" id="so_a" onchange ="checkChiaHet()">;
+Nhap b <input type="number" id="so_b" onchange ="checkChiaHet()">;
+<p id="kq"></p>
+<script>
+  function checkChiaHet(){
+    let a=parseFloat(document.getElementById("so_a").value);
+    let b=parseFloat(document.getElementById("so_b").value);
+    if (b==0) {
+      document.getElementById("kq").textContent = "phep chia khong hop le"
+      return;
+    }
+
+    if (a % b == 0){
+      document.getElementById("kq").textContent = "a chia het cho b"
+    } else {
+      document.getElementById("kq").textContent = "a khong chia het cho b"}
+  }
+</script>
+</body>
+</html>

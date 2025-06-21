@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiem tra tam giac</title>
+</head>
+<body>
+canh 1 <input type="number" id="canh1" onchange="kiemTraTamGiac()">;
+canh 2 <input type="number" id="canh2" onchange="kiemTraTamGiac()">;
+canh 3 <input type="number" id="canh3" onchange="kiemTraTamGiac()">;
+<p id="ketqua"></p>
+
+<script>
+    function kiemTraTamGiac() {
+        let a = parseFloat(document.getElementById("canh1").value);
+        let b = parseFloat(document.getElementById("canh2").value);
+        let c = parseFloat(document.getElementById("canh3").value);
+        if (a < 0 || b < 0 || c < 0) {
+            document.getElementById("ketqua").textContent = "khong thoa man canh tam giac"
+        } else if (a + b < c || a + c < b || c + b < a) {
+            document.getElementById("ketqua").textContent = "khong thoa man canh tam giac"
+        } else if ((a * a + b * b == c * c) || (b * b + c * c == a * a) || (c * c + a * a == b * b)) {
+            document.getElementById("ketqua").textContent = "la tam gia vuong"
+        } else {
+            document.getElementById("ketqua").textContent = "la tam gia thuong"
+        }
+    }
+</script>
+
+<script>
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>kiem tra so nguyen</title>
+</head>
+<body>
+Nhap so bat ky: <input type="number" id="soNguyenCanKiemTra" onchange="kiemTraSo()" step="1"><br>
+<p id="kq"></p>
+
+<script>
+    function kiemTraSo() {
+        let a = parseFloat(document.getElementById("soNguyenCanKiemTra").value);
+        if (a==0) {
+            document.getElementById("kq").textContent = "la 0";
+        } else if (a>0) {
+            document.getElementById("kq").textContent = "a>0";
+        } else {
+            document.getElementById("kq").textContent = "a<0"
+        }
+    }
+</script>
+</body>
+</html>

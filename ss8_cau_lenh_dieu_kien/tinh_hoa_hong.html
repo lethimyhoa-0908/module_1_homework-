@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> tinh hoa hong </title>
+</head>
+<body>
+Nhap doanh thu (trieu dong) <input type="number" id="so_a" onchange ="tinhHoaHong()">;
+<p id="kq"></p>
+<script>
+  function tinhHoaHong(){
+    let a=parseFloat(document.getElementById("so_a").value);
+    if (a<10) {
+      document.getElementById("kq").textContent = "Khong co hoa hong";
+    } else if(a<20) {
+      document.getElementById("kq").textContent = "nhan duoc 5% hoa hong (dong): " + a*0.05*1000000;
+    } else if (a<50){
+      document.getElementById("kq").textContent = "nhan duoc 10% hoa hong(dong): " + a*0.1*1000000;
+    } else {
+      document.getElementById("kq").textContent = "nhan duoc 15% hoa hong(dong): " + a*0.15*1000000;
+    }
+  }
+</script>
+</body>
+</html>

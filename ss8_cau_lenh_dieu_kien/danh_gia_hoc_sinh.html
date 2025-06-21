@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> xep loai hoc sinh </title>
+</head>
+<body>
+Nhap diem kiem tra mieng (20%) <input type="number" id="so_a" onchange ="xepLoaiHocSinh()">;
+Nhap diem giua ky (30%) <input type="number" id="so_b" onchange ="xepLoaiHocSinh()">;
+Nhap diem cuoi ky (50%) <input type="number" id="so_c" onchange ="xepLoaiHocSinh()">;
+<p id="kq"></p>
+<script>
+    function xepLoaiHocSinh(){
+        let a=parseFloat(document.getElementById("so_a").value);
+        let b=parseFloat(document.getElementById("so_b").value);
+        let c=parseFloat(document.getElementById("so_c").value);
+        let diemTrungBinh = a*0.2 + b*0.3 + c*0.5
+        if (diemTrungBinh>8) {
+            document.getElementById("kq").textContent = "Hoc sinh gioi";
+        } else if(diemTrungBinh>6.5) {
+            document.getElementById("kq").textContent = "Hoc sinh Kha";
+        } else if (diemTrungBinh>5){
+            document.getElementById("kq").textContent = "Hoc sinh trung binh";
+        } else {
+            document.getElementById("kq").textContent = "Hoc sinh yeu";
+        }
+    }
+</script>
+</body>
+</html>

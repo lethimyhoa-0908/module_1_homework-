@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra tuổi vào lớp 10</title>
+</head>
+<body>
+Nhập tuổi (> 0): <input type="number" id="tuoi_dau_vao" onchange="kiemTraTuoi()"><br>
+<p id="kq"></p>
+
+<script>
+    function kiemTraTuoi() {
+        let a = parseFloat(document.getElementById("tuoi_dau_vao").value);
+        if (a >= 15) {
+            document.getElementById("kq").textContent = "Đã đủ tuổi vào lớp 10";
+        } else {
+            document.getElementById("kq").textContent = "Không đủ tuổi vào lớp 10";
+        }
+    }
+</script>
+</body>
+</html>

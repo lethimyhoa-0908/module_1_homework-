@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> tinh cuoc dien thoai </title>
+</head>
+<body>
+<table border="1" style="border-collapse: collapse" >
+  <tr style="background-color: lightpink; color: orange">
+    <th> Muc phut goi trong thang </th>
+    <th> Cuoc/phut (vnd) </th>
+  </tr>
+  <tr>
+    <td> 0-50p </td>
+    <td> 600 </td>
+  </tr>
+  <tr>
+    <td> 50p-200p </td>
+    <td> 400 </td>
+  </tr> <tr>
+  <td> >200p </td>
+  <td> 200 </td>
+</tr>
+Nhap so phut (>0) <input type="number" id="so_a" onchange ="tinhCuocDienThoai()">
+<p id="kq"></p>
+<script>
+  function tinhCuocDienThoai(){
+    let a=parseFloat(document.getElementById("so_a").value);
+    if (a>200) {
+      document.getElementById("kq").textContent = "so cuoc dien thoai la (vnd): " + (50*600 + 150 *400 + (a-200)*200);
+    } else if(a>50) {
+      document.getElementById("kq").textContent = "so cuoc dien thoai la (vnd): " + (50*600 + (a-50)*400);
+        } else {
+      document.getElementById("kq").textContent = "so cuoc dien thoai la (vnd): " + (a*600);
+    }
+  }
+</script>
+</body>
+</html>
