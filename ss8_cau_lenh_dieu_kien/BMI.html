@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CHI SO BMI </title>
+</head>
+<body>
+<H1> BANG CHI SO BMI </H1>
+<table border="1" style="border-collapse: collapse" >
+  <tr>
+    <th> chieu cao (m) </th>
+    <th> can nang (kg) </th>
+  </tr>
+  <tr>
+    <td> <input id="chieu cao" type="number"> </td>
+    <td> <input id="can nang" type="number"> </td>
+  </tr>
+</table>
+<button onclick="tinhbmi()">Tinh BMI</button>
+<p id="danhgia"> </p>
+<script>
+  function tinhbmi() {
+  let chieuCao=parseFloat(document.getElementById('chieu cao').value);
+  let canNang=parseFloat(document.getElementById('can nang').value);
+  let BMI= canNang/(chieuCao*2)
+  if (BMI>=30){document.getElementById("danhgia").textContent = "beo phi"
+  } else if (BMI>=25){document.getElementById("danhgia").textContent = "thua can"
+  } else if (BMI>=18.5) {document.getElementById("danhgia").textContent ="thuong"
+  } else {document.getElementById("danhgia").textContent ="thieu can"}
+  }
+</script>
+</body>
+</html>

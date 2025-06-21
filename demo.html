@@ -5,17 +5,17 @@
   <title>Title</title>
 </head>
 <body>
-<h1>Tính diện tích hình tròn</h1>
-<input id="banKinh" oninput="tinhDienTich()" placeholder="Nhập bán kính hình tròn">
-<button onclick="tinhDienTich()">Tính diện tích</button>
-<p id="ketQua"></p>
-</body>
-<script>
+<input type="number" id="age">
+<button onclick="checkAge()">Kiểm tra</button>
 
-  function tinhDienTich() {
-    let r = document.getElementById('banKinh').value;
-    let s = r * r * 3.14;
-    document.getElementById("ketQua").innerHTML = "<b>diện tính hình tròn : </b>" + s
+<script>
+  function checkAge() {
+    let age = document.getElementById("age").value;
+    if (age >= 18) {
+      alert("Bạn đủ tuổi!");
+    } else {
+      alert("Bạn chưa đủ tuổi.");
+    }
   }
 </script>
 </html>
