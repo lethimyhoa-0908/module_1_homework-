@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>chuyen do C sang do F </title>
+</head>
+<body>
+Nhap met : <input type="number" id="doC" onchange="chuyendo()" step="1"><br>
+<p id="kq"></p>
+<script>
+  function chuyendo() {
+    let a = parseFloat(document.getElementById("doC").value);
+    document.getElementById("kq").textContent = a * 3.2808 + " feet"
+  }
+
+</script>
+</body>
+</html>
