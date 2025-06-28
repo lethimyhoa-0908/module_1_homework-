@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Khung viền sao</title>
+</head>
+<body>
+<script>
+    let hang = 5;
+    let cot = 10;
+
+    for (let row = 1; row <= hang; row++) {
+        let dong = "";
+        for (let col = 1; col <= cot; col++) {
+            if (row === 1 || row === hang || col === 1 || col === cot) {
+                dong += "* ";
+            } else {
+                dong += "-  ";
+            }
+        }
+        document.write(dong + "<br>");
+    }
+</script>
+</body>
+</html>

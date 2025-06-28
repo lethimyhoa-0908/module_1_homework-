@@ -1,29 +1,22 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Kiểm tra chia hết</title>
+  <title>Số nguyên tố</title>
 </head>
 <body>
-Nhập a: <input type="number" id="so_a" onchange="checkChiaHet()"><br>
-Nhập b: <input type="number" id="so_b" onchange="checkChiaHet()"><br>
-<p id="kq"></p>
-
+<h1>Hiển thị các số nguyên tố nhỏ hơn 1000</h1>
 <script>
-  function checkChiaHet() {
-    let a = parseFloat(document.getElementById("so_a").value);
-    let b = parseFloat(document.getElementById("so_b").value);
-    let kq = document.getElementById("kq");
-
-    if (b == 0) {
-      kq.textContent = "Phép chia không hợp lệ";
-      return;
+  for (let n = 2; n < 1000; n++) {
+    let isPrime = true;
+    for (let i = 2; i <= Math.sqrt(n); i++) {
+      if (n % i === 0) {
+        isPrime = false;
+        break;
+      }
     }
-
-    if (a % b == 0) {
-      kq.textContent = "a chia hết cho b";
-    } else {
-      kq.textContent = "a không chia hết cho b";
+    if (isPrime) {
+      document.write(n + "<br>");
     }
   }
 </script>

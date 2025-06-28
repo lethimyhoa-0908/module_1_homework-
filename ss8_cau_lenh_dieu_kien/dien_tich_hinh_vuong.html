@@ -1,10 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <title>dien tich hinh vuong </title>
 </head>
 <body>
-$END$
+Nhap canh a (m) : <input type="number" id="doC" onchange="chuyendo()" step="1"><br>
+<p id="kq"></p>
+<script>
+  function chuyendo() {
+    let a = parseFloat(document.getElementById("doC").value);
+    document.getElementById("kq").textContent = a * a + " m2"
+  }
+
+</script>
 </body>
 </html>

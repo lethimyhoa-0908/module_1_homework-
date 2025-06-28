@@ -2,9 +2,38 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <title> tinh thue TNCN  </title>
 </head>
 <body>
-$END$
-</body>
+<table border="1" style="border-collapse: collapse" >
+  <tr style="background-color: lightpink; color: orange">
+    <th> Tien luong </th>
+    <th> muc thue (vnd) </th>
+  </tr>
+  <tr>
+    <td> duoi 60tr vnd </td>
+    <td> 5%  </td>
+  </tr>
+  <tr>
+    <td> 60tr - 200 tr vnd </td>
+    <td> 10%  </td>
+  </tr> <tr>
+  <td> > tren 200tr  </td>
+  <td> 15% </td>
+</tr>
+  Nhap so thu nhap (>0) <input type="number" id="so_a" onchange ="tinhCuocDienThoai()">
+  <p id="kq"></p>
+  <script>
+    function tinhCuocDienThoai(){
+      let a=parseFloat(document.getElementById("so_a").value);
+      if (a<=60) {
+        document.getElementById("kq").textContent = "so thue phai tra la  " + a*0.05 + "trieu VND";
+      } else if(a<200) {
+        document.getElementById("kq").textContent = "so thue phai tra la (vnd): " + a*0.1 + "trieu VND";
+      } else {
+        document.getElementById("kq").textContent = "so thue phai tra la (vnd): " + a*0.15 + "trieu VND";
+      }
+    }
+  </script>
+ </body>
 </html>

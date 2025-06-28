@@ -1,10 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>giai phuong trinh bac 1 </title>
 </head>
 <body>
-$END$
+<h1> giai PT bac 1: ax +b = 0 </h1>
+Nhap a : <input type="number" id="chieu rong" onchange="chuyendo()" step="1"><br>
+Nhap b : <input type="number" id="chieu dai" onchange="chuyendo()" step="1"><br>
+Nhap c : <input type="number" id="so c" onchange="chuyendo()" step="1"><br>
+<p id="kq"></p>
+<p id="kq2"></p>
+<script>
+    function chuyendo() {
+        let a = parseFloat(document.getElementById("chieu rong").value);
+        let b = parseFloat(document.getElementById("chieu dai").value);
+        let c = parseFloat(document.getElementById("so c").value);
+        let delta = b*b - 4 *a*c
+        if (delta < 0 ) {
+            document.getElementById("kq").textContent = 'phuong tinh vo nghiem'
+        } else if (delta == 0) {
+            document.getElementById("kq").textContent = 'x= ' + (-b/2*a)
+        } else {
+            document.getElementById("kq").textContent = 'x1=' + (-b + Math.sqrt(delta)) / (2*a)
+            document.getElementById("kq2").textContent = 'x2=' + (-b - Math.sqrt(delta)) / (2*a)
+        }
+    }
+</script>
 </body>
 </html>

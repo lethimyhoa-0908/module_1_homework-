@@ -1,10 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <title>Kiểm tra tuổi nguoi </title>
 </head>
 <body>
-$END$
+Nhập so bat ky : <input type="number" id="tuoi_dau_vao" onchange="kiemTraTuoi()"><br>
+<p id="kq"></p>
+
+<script>
+  function kiemTraTuoi() {
+    let a = parseFloat(document.getElementById("tuoi_dau_vao").value);
+    if (a <= 120 && a>0) {
+      document.getElementById("kq").textContent = "tuoi nguoi";
+    } else {
+      document.getElementById("kq").textContent = "khong phai tuoi nguoi";
+    }
+  }
+</script>
 </body>
 </html>

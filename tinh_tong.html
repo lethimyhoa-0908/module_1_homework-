@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<input id="sonhap" onchange="tinhtong()" placeholder="so luong so muon tinh tong">
+<script>
+function tinhtong() {
+  let n1 = parseFloat(document.getElementById("sonhap").value);
+  let n2 = n1 + 2
+  let a = 0, b = 1;
+  for (let i = 0; i < n2; i++) {
+    let next = a + b;
+    a = b;
+    b = next;
+  } document.write ("tong cua day fibonacci la : " + (a - 1))
+  }
+</script>
+</body>
+</html>

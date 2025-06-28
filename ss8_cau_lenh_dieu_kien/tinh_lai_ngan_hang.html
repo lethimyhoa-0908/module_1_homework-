@@ -1,10 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <title> tinh lai ngan hang </title>
 </head>
 <body>
-$END$
+<h1> tinh lai ngan hang (5%/nam) </h1>
+Nhap so tien can gui: <input type="number" id="chieu rong" onchange="chuyendo()" step="1"><br>
+Nhap so thang muon gui : <input type="number" id="chieu dai" onchange="chuyendo()" step="1"><br>
+<p id="kq"></p>
+<script>
+  function chuyendo() {
+    let a = parseFloat(document.getElementById("chieu rong").value);
+    let b = parseFloat(document.getElementById("chieu dai").value);
+      document.getElementById("kq").textContent = "lai suat duoc nhanla " + (( a * (1 + (0.05/12))**b) - a)
+  }
+</script>
 </body>
 </html>

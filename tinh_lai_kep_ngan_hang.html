@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Tính Lãi Kép</title>
+</head>
+<body>
+<script>
+  let P = parseFloat(prompt("Nhập số tiền gửi ban đầu (VND):"));
+  let r = parseFloat(prompt("Nhập lãi suất hàng năm (%)")) / 100;
+  let n = parseInt(prompt("Nhập số năm gửi:"));
+
+  let tongTien = P;
+
+  for (let i = 1; i <= n; i++) {
+    tongTien = tongTien * (1 + r);
+    document.write(`Năm ${i}: ${tongTien.toLocaleString()} VND<br>`);
+  }
+</script>
+</body>
+</html>

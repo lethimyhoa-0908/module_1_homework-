@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Trò chơi đoán số</title>
+</head>
+<body>
+<button onclick="choi()">Chơi</button>
+
+<script>
+  function choi() {
+    let min = parseInt(prompt("Nhập giá trị nhỏ nhất:"));
+    let max = parseInt(prompt("Nhập giá trị lớn nhất:"));
+    let soCanDoan = Math.floor(Math.random() * (max - min + 1)) + min;
+    let doan;
+    let i = 1;
+    while (i <= 3) {
+      doan = parseInt(prompt('Nhập số bạn đoán:'));
+      if (doan === soCanDoan) {
+        alert("Chúc mừng! Bạn đã đoán đúng!");
+      } else if (doan < soCanDoan) {
+        alert("Số bạn đoán nhỏ hơn!");
+      } else {
+        alert("Số bạn đoán lớn hơn!");
+      }
+      if (i===3) {
+        alert(` Hết lượt! Số đúng là: ${soCanDoan}`);
+      }
+    }
+
+  }
+</script>
+</body>
+</html>
