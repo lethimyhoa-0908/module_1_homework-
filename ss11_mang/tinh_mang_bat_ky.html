@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let n= +prompt("nhap do dai mang");
+  let array = new Array(n);
+  for (i=0; i<array.length; i++) {
+    array [i] = +prompt(" nhap phan tu thu " + i);
+  }
+  alert("mang la: " + array);
+  let max = array[0]
+  for (i=0; i<array.length; i++) {
+    if (array[i] > max) {
+      max = array[i]
+    }
+  }alert ("so lon nhat trong mang la " + max );
+  let sum=0
+    for (i=0; i<array.length; i++) {
+      sum += array[i]
+  } alert ("gia tri trung binh cua mang la:  " + sum/ array.length );
+</script>
+</body>
+</html>
