@@ -6,21 +6,17 @@
 </head>
 <body>
 <script>
-    let n = +prompt("nhap do dai mang ");
+    let n = 5;
     let array = new Array(n);
     for (let i = 0; i < array.length; i++) {
-        array [i] = +prompt(" nhap phan tu thu " + i);
+        array [i] = prompt(" nhap phan tu thu " + i);
     }
-    let v = +prompt("nhap mot so bat ky")
     for (let i = 0; i < array.length; i++) {
-        if (array.includes(v)) {
-          array.splice(array.indexOf(v), 1)
-          array[array.length - 1] = 0;
+        if (array[i] === "-") {
+            array[i] = "_"
         }
     }
-    alert(array);
-
+    alert(array)
 </script>
 </body>
 </html>
-

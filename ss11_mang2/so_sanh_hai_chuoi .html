@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  let n= 5;
+  let array1 = new Array(n);
+  for (let i=0; i<array1.length; i++) {
+    array1 [i] = prompt(" Chuoi1: nhap phan tu thu " + i);
+  }
+  let m= 5;
+  let array2 = new Array(m);
+  for (let j=0; j<array2.length; j++) {
+    array2 [j]= prompt(" chuoi 2: nhap phan tu thu " + j);
+  }
+let count=0
+  for (let i=0; i<array1.length; i++) {
+    for (let j = 0; j < array2.length; j++) {
+      if (array1[i] === array2[j]) {
+        count++
+      }
+    }
+  }
+    if (count == 0){
+      document.write("hai mang khong giong nhau")
+    }
+    else {
+      document.write("hai mang giong nhau " + count + " ky tu ");
+    }
+
+
+
+</script>
+</body>
+</html>
