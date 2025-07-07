@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+Nhap so nguyen duong <input id="n" >
+<button onclick="tinhGiaiThua()"> tinh giai thua </button>
+<p id = "results"></p>
+<script>
+  function tinhGiaiThua () {
+    let a = document.getElementById("n").value
+    let giaithua = 1
+    for (let i= 1; i<=a; i++) {
+      giaithua = giaithua * i
+    }
+    document.getElementById("results").innerHTML = giaithua;
+  }
+
+</script>
+</body>
+</html>

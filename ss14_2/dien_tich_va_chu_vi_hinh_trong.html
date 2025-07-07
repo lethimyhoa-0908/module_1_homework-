@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Nhap ban kinh hinh tron - cm <input id="r" >
+<button onclick="dienTichHinhTron()"> dien tich</button>
+<button onclick="chuViHinhTron()"> chu vi </button>
+<p id = "results"></p>
+<script>
+    function dienTichHinhTron () {
+        let a = document.getElementById("r").value
+        let dientich = a * a * 3.14
+        document.getElementById("results").innerHTML = dientich;
+    }
+    function chuViHinhTron () {
+        let a = document.getElementById("r").value
+        let chuvi = a * 2 * 3.14
+        document.getElementById("results").innerHTML = chuvi;
+    }
+</script>
+</body>
+</html>
