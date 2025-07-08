@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Convert Celsius to F and K </title>
+</head>
+<body>
+<script>
+  class ConvertCToKAdF {
+    constructor(cel) {
+      this.cel = cel;
+    }
+
+    getCel() {
+      return this.cel;
+    }
+
+  }
+  let cel1 = new ConvertCToKAdF(15);
+
+  alert("Celsius to Fahrenheit : "  + (cel1.getCel() * 9/5) + 32);
+  alert("Celsius to Kelvin : "  + (cel1.getCel() * 1  + 273.15));
+
+
+</script>
+</body>
+</html>
