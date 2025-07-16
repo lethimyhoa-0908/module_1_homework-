@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function splitNumber(n) {
+        const thousands = Math.floor(n / 1000);
+        const hundreds = Math.floor((n % 1000) / 100);
+        const tens = Math.floor((n % 100) / 10);
+        const units = n % 10;
+        if (thousands === 0) {
+            return -1
+        } else {
+            let array = [hundreds * 100 + tens * 10 + units, thousands * 100 + tens * 10 + units, hundreds * 10 + thousands * 100 + units, thousands * 100 + hundreds * 10 + tens]
+            let max = array[0];
+            for (i = 1; i < array.length; i++) {
+                if (array[i] > max) {
+                    max = array [i]
+                }
+                return max
+            }
+        }
+    }
+alert(splitNumber(1234))
+</script>
+</body>
+</html>

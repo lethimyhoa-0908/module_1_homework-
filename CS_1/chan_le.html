@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function checkArray(array) {
+        let count = 0
+        for (let i = 0; i <= 4; i++) {
+            if (array[i] % 2 === 0) {
+                count++
+            }
+        }
+        if (count === 4) {
+            return 1
+        } else if (count === 0) {
+            return 0
+        } else {
+            return -1
+        }
+    }
+    array1 = [2,4,6,8]
+    alert(checkArray(array1))
+
+</script>
+</body>
+</html>

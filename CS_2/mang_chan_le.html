@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function checkArray(array) {
+        let countArray = 0
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] === array [array.length - 1 - i]) {
+                countArray++
+            } else {
+                break
+            }
+        }
+        if (countArray %= (array.length / 2)) {
+            return "No"
+        } else {
+            return "OK"
+        }
+    }
+
+    array1 = [1, 4, 3, 1]
+    alert(checkArray(array1))
+
+</script>
+</body>
+</html>
