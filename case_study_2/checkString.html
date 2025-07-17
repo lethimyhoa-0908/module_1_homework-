@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Check Vowels</title>
+</head>
+<body>
+<script>
+  let n = prompt("Nhập một chuỗi bất kỳ:");
+  alert(checkString(n));
+
+  function checkString(str) {
+    let vowels = ["a", "e", "i", "o", "u"];
+    let array = str.split("");
+    let result = [];
+
+    for (let i = 0; i < array.length; i++) {
+      if (vowels.includes(array[i])) {
+        result.push(array[i]);
+      }
+      for (let i = 0; i < array.length; i++) {
+        for ( let j= 0; j<= array.length; j++) {
+          if (array[i] === array[j] && i !== j) {
+            array.splice (i, 1)
+          }
+        }
+      }
+    }
+    return result;
+  }
+</script>
+</body>
+</html>
