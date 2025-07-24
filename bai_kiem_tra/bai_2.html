@@ -7,18 +7,19 @@
 <body>
 <script>
     alert(checkUpperChar("abcd"))
+
     function checkUpperChar(string) {
         let array = string.split("");
         let count = 0;
         let upperString = string.toUpperCase()
-        let upperArray =  upperString.split("");
-        for (let i = 0; i<upperArray.length; i++ ) {
-       if ( array.includes(upperArray[i])){
-         count ++
-       }
+        let upperArray = upperString.split("");
+        for (let i = 0; i < upperArray.length; i++) {
+            if (array.includes(upperArray[i])) {
+                count++
+            }
         }
         if (count === 0) {
-            return  ("the String is not contain upper char")
+            return ("the String is not contain upper char")
         } else {
             return count
         }
