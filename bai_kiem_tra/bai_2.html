@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    alert(checkUpperChar("abcdEF"))
+    function checkUpperChar(string) {
+        let array = string.split("");
+        let count = 0;
+        let upperString = string.toUpperCase()
+        let upperArray =  upperString.split("");
+        for (let i = 0; i<upperArray.length; i++ ) {
+       if ( array.includes(upperArray[i])){
+         count ++
+       }
+        }
+        if (count === 0) {
+            return + "the String is not contain upper char"
+        } else {
+            return count
+        }
+    }
+</script>
+</body>
+</html>

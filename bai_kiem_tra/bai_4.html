@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <h2>Product Manager</h2>
+    <input id="phoneCode" placeholder="Enter phone Code">
+    <input id="phoneName" placeholder="Enter phone name">
+    <input id="manufacturer" placeholder="Enter manufacturer">
+    <input id="price" placeholder="Enter price">
+    <button onclick="addNewNumber()" class="btn btn-outline-success btn-sm">Add new number</button>
+    <p id="quantity"></p>
+    <p id="display"></p>
+</div>
+
+<script>
+    class customerName {
+        constructor(id, name, manufacturer, price) {
+            this.id = id;
+            this.name = name;
+            this.manufacturer = manufacturer;
+            this.price = price
+        }
+    }
+
+    let customer1 = new customerName("ss2025", "samsung", "samsung", "10.000.000");
+    let customer2 = new customerName("nk2025", "nokiacells", "nokia", "12.000.000");
+    let customer3 = new customerName("xm2025", "redminote5", "xiaomi", "8.000.000");
+    let customerList = [customer1, customer2, customer3];
+
+    showList(customerList);
+
+    function addNewNumber() {
+        let id = document.getElementById("phoneCode").value;
+        let name = document.getElementById("phoneName").value;
+        let manufacturer = document.getElementById("manufacturer").value;
+        let price = document.getElementById("price").value;
+        let newProduct = new customerName(id, name, manufacturer, price)
+        customerList.push(newProduct);
+        document.getElementById("phoneCode").value = "";
+        document.getElementById("phoneName").value = "";
+        document.getElementById("manufacturer").value = "";
+        document.getElementById("price").value = "";
+        showList(customerList);
+
+    }
+
+    function deleteProduct(index) {
+        let conf = confirm("Do you want to delete this line?");
+        if (conf) {
+            customerList.splice(index, 1);
+        }
+        showList(customerList);
+    }
+
+    function editProduct(index) {
+        let newId = prompt("enter new code", customerList[index].id);
+        let newName = prompt("enter new product nam", customerList[index].name);
+        let newManufacturer = prompt("enter new manufacturer", customerList[index].manufacturer);
+        let newPrice = prompt("enter new price", customerList[index].price);
+
+        customerList[index].id = newId;
+        customerList[index].name = newName;
+        customerList[index].price = newPrice;
+
+        showList(customerList);
+    }
+
+    function showList(list) {
+        // hiển thị productList => table
+        let tableString = `<table class="table table-dark" border="1" style="border-collapse: collapse">
+                            <tr>
+                                <th>No</th>
+                                <th>Phone Code</th>
+                                <th>Phone Name</th>
+                                <th>Manufacturer</th>
+                                <th>Price</th>
+                                <th>Edit</th>
+                                <th>Delete</th>
+                            </tr>`
+        for (let i = 0; i < list.length; i++) {
+            tableString += `<tr>
+                                <td>${i + 1}</td>
+                                <td>${list[i].id}</td>
+                                <td>${list[i].name}</td>
+                                <td>${list[i].manufacturer}</td>
+                                <td>${list[i].price}</td>
+                                <td><button class="btn btn-sm btn-primary" onclick="editProduct(${i})">Edit</button></td>
+                                <td><button class="btn btn-sm btn-danger" onclick="deleteProduct(${i})">Delete</button></td>
+                             </tr>`
+        }
+        tableString += `</table>`
+
+        document.getElementById("display").innerHTML = tableString;
+        document.getElementById("quantity").innerText = "Số lương: " + list.length;
+    }
+</script>
+</body>
+</html>

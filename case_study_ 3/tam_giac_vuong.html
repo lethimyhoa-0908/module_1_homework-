@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n;
+    do {
+        n = +prompt("Nhập độ dài của mảng:");
+    } while (n <= 0 || n % 3 !== 0 || n>15);
+
+    let array = new Array(n);
+    for (let i = 0; i < n; i++) {
+        array[i] = +prompt("Nhập phần tử thứ " + i + ":");
+    }
+    alert(array);
+
+    for (let i = 0; i <= n; i + 3) {
+        if (array[i] * array[i] === array[i + 1] * array[i + 1] + array[i + 2] * array[i + 2] || array[i + 1] * array[i + 1] === array[i] * array[i] + array[i + 2] * array[i + 2] || array[i + 2] * array[i + 2] === array[i + 1] * array[i + 1] + array[i] * array[i]) {
+            alert("OK");
+        } else {
+            alert("NO")
+        }
+    }
+</script>
+</body>
+</html>

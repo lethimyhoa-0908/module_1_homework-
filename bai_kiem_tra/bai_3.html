@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>check mang so nguyen tang dan </title>
+</head>
+<body>
+<script>
+  function isPrime(num) {
+    if (num < 2) return false;
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+      if (num % i === 0) return false;
+    }
+    return true;
+  }
+  function checkArray(array) {
+    let arrayB = [];
+    for (let i = 0; i < array.length; i++) {
+      if (isPrime(array[i])) {
+       arrayB.push(array[i]);
+      }
+    }
+    arrayB.sort (function(a, b) {
+      return a - b
+    })
+    return arrayB
+  }
+    let array1=[1,5,6,23,8,47,10,3];
+  alert(checkArray(array1));
+</script>
+</body>
+</html>

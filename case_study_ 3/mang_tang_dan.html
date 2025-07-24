@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  function mangTangDan(array) {
+    let finalArray = [];
+    for (let i = 0; i < array.length - 2; i++) {
+      if (array[i] + array[i + 1] === array[i + 2]) {
+        let arrayB = [array[i], array[i + 1]];
+        finalArray.push(arrayB);
+      }
+    }
+
+    finalArray.sort((a, b) => {
+      let sumA = a.reduce((acc, val) => acc + val, 0);
+      let sumB = b.reduce((acc, val) => acc + val, 0);
+      return sumA - sumB;
+    });
+
+    return finalArray;
+  }
+
+  alert((mangTangDan([1,5,6,11,9,20,8,0,8,1])));
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function abbreviation(string) {
+        let array = string.split(" ");
+        let finalString = "";
+        let branchArray = []
+        if (array.length === 1) {
+            alert(array[0])
+        } else {
+            for (i = 0; i < array.length; i++) {
+                branchArray = array[i].split("");
+                finalString += branchArray[0]
+            }
+            let upperFinalString = finalString.toUpperCase();
+            return upperFinalString
+        }
+    }
+    alert(abbreviation("xin chao"));
+</script>
+</body>
+</html>
